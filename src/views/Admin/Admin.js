@@ -1,11 +1,11 @@
 import React from "react";
-import { ProfileCard } from "../components/userProfileCard/ProfileCard";
+import { ProfileCard } from "../../components/userProfileCard/ProfileCard";
 import { useMediaQuery } from "react-responsive";
-import { AddSupervisor } from "../components/addSupervisor/AddSupervisor";
+import { AddSupervisor } from "../../components/addSupervisor/AddSupervisor";
 
-import "./Home.css";
+import "./admin.css";
 
-const Home = () => {
+const Admin = () => {
   const isMobileOrDesktop = useMediaQuery({ maxWidth: 600 });
 
   return isMobileOrDesktop ? (
@@ -58,4 +58,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Admin;

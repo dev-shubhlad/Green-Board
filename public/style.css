@@ -7,13 +7,23 @@ body {
 
 .container {
   max-width: 750px;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
 }
 
 .desktop-body {
-  margin-top: 15px;
+  margin: 15px auto;
+  padding: 0;
 }
 
-@media only screen and (max-width: 450px) {
+.mobile-container {
+  margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 600px) {
   body {
     height: 100vh;
     width: 100%;

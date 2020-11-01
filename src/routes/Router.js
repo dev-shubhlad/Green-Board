@@ -5,7 +5,9 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+
 import { Login } from "../views/Authontication/Login/Login";
+import Admin from "../views/Admin/Admin";
 import Home from "../views/Home";
 
 import PrivateRoute from "./privateRoute/PrivateRoute";
@@ -16,7 +18,7 @@ const AppRouter = () => {
       <Switch>
         <Route path="/login" component={Login} />
         <PrivateRoute exact path="/" component={Home} />
-        <PrivateRoute path="/home" component={Home} />
+        <PrivateRoute path="/admin" component={Admin} />
       </Switch>
     </Router>
   );

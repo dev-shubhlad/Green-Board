@@ -9,6 +9,7 @@ import Institute from "../../../assets/images/icons/Mobile/MyinstituteWhiteicon.
 import Admin from "../../../assets/images/icons/Mobile/AdminiconWhite.svg";
 import Instructor from "../../../assets/images/icons/Mobile/Instructoricon(greenBackground).svg";
 import Student from "../../../assets/images/icons/Mobile/StudentprofileWhiteicon.svg";
+import More from "../../../assets/images/icons/Desktop/Moreblackish.svg";
 
 import "./mobileNavbar.css";
 
@@ -23,6 +24,7 @@ const useStyles = makeStyles({
     fontSize: ".53rem",
     fontWeight: "500",
     textDecoration: "none",
+    zIndex: 9999,
   },
 });
 
@@ -58,7 +60,7 @@ export const MobileNavbar = () => {
     >
       <BottomNavigationAction
         component={Link}
-        to="/home"
+        to="/"
         classes={actionClasses}
         label="Institute"
         icon={
@@ -74,9 +76,9 @@ export const MobileNavbar = () => {
       />
       <BottomNavigationAction
         component={Link}
-        to="/home"
+        to="/"
         classes={actionClasses}
-        label="Nearby"
+        label="Instructor"
         icon={
           <img
             src={Instructor}
@@ -90,9 +92,9 @@ export const MobileNavbar = () => {
       />
       <BottomNavigationAction
         component={Link}
-        to="/home"
+        to="/"
         classes={actionClasses}
-        label="Favorites"
+        label="Student"
         icon={
           <img
             src={Student}
@@ -106,9 +108,9 @@ export const MobileNavbar = () => {
       />
       <BottomNavigationAction
         component={Link}
-        to="/home"
+        to="/admin"
         classes={actionClasses}
-        label="Favorites"
+        label="Admin"
         icon={
           <img
             src={Admin}
@@ -122,12 +124,12 @@ export const MobileNavbar = () => {
       />
       <BottomNavigationAction
         component={Link}
-        to="/home"
+        to="/"
         classes={actionClasses}
-        label="Nearby"
+        label="More"
         icon={
           <img
-            src={Institute}
+            src={More}
             className={classnames({
               "selected-tab": value === 4,
               "nonselect-tab": value !== 4,
