@@ -9,6 +9,10 @@ body {
   max-width: 750px;
 }
 
+.desktop-body {
+  margin-top: 15px;
+}
+
 @media only screen and (max-width: 450px) {
   body {
     height: 100vh;

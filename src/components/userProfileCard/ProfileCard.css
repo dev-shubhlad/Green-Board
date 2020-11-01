@@ -1,0 +1,46 @@
+.user-card {
+  min-width: 315px;
+  position: relative;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5a5a5a !important;
+  padding: 10px;
+  background: #ffffff;
+  border: 0.5px solid #d8d8d8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+.rm-btn {
+  font-size: 15px;
+  font-weight: 700;
+  color: #eb5757;
+  background: #ffffff;
+  border: 1px solid #eb5757;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 3px 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+}
+.profile-image {
+  width: 62px;
+  border-radius: 50%;
+}
+
+.editProfile {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 26px;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 23.44px;
+}
+
+.position-badge {
+  margin-left: 10px;
+}
