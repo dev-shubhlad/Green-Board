@@ -6,6 +6,8 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Login } from "../views/Authontication/Login/Login";
+import Home from "../views/Home";
+
 import PrivateRoute from "./privateRoute/PrivateRoute";
 
 const AppRouter = () => {
@@ -13,7 +15,8 @@ const AppRouter = () => {
     <Router>
       <Switch>
         <Route path="/login" component={Login} />
-        {/* <PrivateRoute path="/admin" component={Admin} /> */}
+        <PrivateRoute exact path="/" component={Home} />
+        <PrivateRoute path="/home" component={Home} />
       </Switch>
     </Router>
   );
