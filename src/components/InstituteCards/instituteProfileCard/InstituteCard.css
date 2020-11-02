@@ -1,0 +1,33 @@
+.institute-card {
+  min-width: 315px;
+  position: relative;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5a5a5a !important;
+  padding: 10px;
+  background: #ffffff;
+  border: 0.5px solid #d8d8d8;
+  border-radius: 4px;
+}
+
+.profile-image {
+  width: 62px;
+  border-radius: 50%;
+}
+
+.editProfile {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 26px;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 23.44px;
+}
+
+.institute-badge {
+  background-color: #6462a7;
+}
