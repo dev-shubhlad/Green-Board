@@ -5,6 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import "./Home.css";
 import { InstituteTab } from "../components/tabs/InstituteTab";
 import { InstituteProfile } from "../components/InstituteCards/instituteProfile/InstituteProfile";
+import { CourseStructure } from "../components/InstituteCards/instituteCourseStructure/CourseStructure";
 
 const Home = () => {
   const isMobileOrDesktop = useMediaQuery({ maxWidth: 600 });
@@ -19,12 +20,14 @@ const Home = () => {
     </div>
   ) : (
     <div className="desktop-body container d-flex h-100">
-      <div className="white h-100 flex-fixed-width-item">
+      <div className="white h-100 .flex-fixed-left-width-item">
         <InstituteCard />
-        <InstituteTab />
       </div>
       <div className="h-100 flex-fixed-right-width-item">
-        <InstituteProfile />
+        {/* <InstituteProfile /> */}
+        <div>
+          <CourseStructure />
+        </div>
       </div>
     </div>
   );

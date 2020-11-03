@@ -5,7 +5,7 @@ import "./InstituteCard.css";
 
 export const InstituteCard = (props) => {
   return (
-    <div className="institute-card">
+    <div className="institute-card box-custom-shadow">
       <div className="row">
         <div className="col-3 d-flex align-items-center ">
           <img src={DP} className="profile-image" alt={"shubham"} />

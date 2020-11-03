@@ -33,7 +33,7 @@ const Admin = () => {
     </div>
   ) : (
     <div className="desktop-body container d-flex h-100">
-      <div className="white h-100 flex-fixed-width-item">
+      <div className="white h-100 .flex-fixed-left-width-item">
         <ProfileCard />
       </div>
       <div className="h-100 flex-fixed-right-width-item">

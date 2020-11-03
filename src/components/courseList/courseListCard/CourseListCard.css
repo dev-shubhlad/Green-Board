@@ -1,0 +1,50 @@
+.course-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.rating {
+  color: #757575;
+  font-size: 15px;
+}
+
+.total-rating {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.course-badge {
+  margin-left: 10px;
+}
+
+.category-badge {
+  background-color: #f0f4f7;
+  font-size: 13px;
+  color: #454852;
+}
+
+.course-type {
+  color: #0fbc71;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.instructor-name {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  color: #3d3c3c;
+  display: block;
+  padding-top: 10px;
+}
+
+.course-lst-btn {
+  border-color: #0fbc71;
+  color: #0fbc71;
+}
+
+.course-list-card {
+  border: none;
+  border-bottom: 1px solid #969696;
+}

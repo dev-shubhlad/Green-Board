@@ -1,6 +1,7 @@
 .flex-fixed-left-width-item {
   flex: 0 0 315px;
   margin: 0 auto;
+  width: 325px;
 }
 
 .flex-fixed-right-width-item {
