@@ -1,26 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../../assets/images/Logo/GreenBordLOGO.svg";
 import InstituteLogo from "../../../assets/images/icons/Instituteloginicon.svg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
-import { api, setAuthToken } from "../../../api/Axios";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../../redux/actions/AuthAction";
+import { Loader } from "../../../components/loader/Loader";
 
-export const Login = () => {
+export const Login = ({ location, history }) => {
   const [instituteID, setInstituteID] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const login = async () => {
-    try {
-      let resposne = await api.get("/login");
-      console.log(resposne);
-    } catch (error) {
-      console.log("Error");
-    }
+  const notify = (message) => {
+    toast.error(message);
   };
+
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
+  const { loading, error, userToken } = auth;
+
+  const redirect = location.search ? location.search.split("=")[1] : "/";
+
+  useEffect(() => {
+    if (userToken) {
+      history.push(redirect);
+    }
+    if (error) {
+      notify(error);
+    }
+  }, [history, userToken, redirect, error]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    login();
+    dispatch(login(email, password));
   };
 
   return (
@@ -71,7 +85,8 @@ export const Login = () => {
               />
             </div>
             <div>
-              <button type="submit">LOGIN</button>
+              <button type="submit">{loading ? <Loader /> : "LOGIN"}</button>
+              <ToastContainer closeButton={false} />
             </div>
           </form>
           <div>
