@@ -29,7 +29,7 @@ const useTabStyles = makeStyles((theme) => ({
   },
 }));
 
-export const InstituteTab = () => {
+export const InstituteHorizontalTab = () => {
   const [value, setValue] = useState(0);
 
   const classes = useStyles();

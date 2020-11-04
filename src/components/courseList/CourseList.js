@@ -5,7 +5,7 @@ import { CourseListCard } from "./courseListCard/CourseListCard";
 export const CourseList = () => {
   return (
     <div className="course-list-box box-custom-shadow">
-      <select name="course" id="course-type">
+      <select name="course" id="course-type" style={{ outline: "none" }}>
         <option value="">Select Type</option>
         <option value="saab">Saab</option>
         <option value="opel">Opel</option>
