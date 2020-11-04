@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
 const useTabStyles = makeStyles((theme) => ({
   root: {
     width: "50%",
+    "&.Mui-selected": {
+      outline: "none",
+    },
   },
   seleced: {
     border: "none",
