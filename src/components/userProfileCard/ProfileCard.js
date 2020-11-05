@@ -4,6 +4,7 @@ import Edit from "../../assets/images/icons/Editicon.svg";
 import "./ProfileCard.css";
 
 export const ProfileCard = (props) => {
+  const { user, rmbutton, edit } = props;
   return (
     <div className="user-card">
       <div className="row">
@@ -11,20 +12,29 @@ export const ProfileCard = (props) => {
           <img src={DP} className="profile-image" alt={"shubham"} />
         </div>
         <div className="col-9">
-          <span className="title">Shubham Lad</span>
+          <span className="title">{user.name}</span>
           <br />
           <span>Address</span>
           <br />
-          <span>shubham@gmail.com</span>
+          <span>{user.email}</span>
           <br />
           <span>7249148567</span>
-          <span class="badge badge-secondary position-badge">SUPERVISOR</span>
+          <span className="badge badge-secondary position-badge">
+            {user.role}
+          </span>
         </div>
-        <img src={Edit} className="editProfile" />
+        {edit && <img src={Edit} className="editProfile" />}
       </div>
-      <div className="row">
-        <span className="rm-btn">REMOVE</span>
-      </div>
+      {rmbutton && (
+        <div className="row">
+          <span className="rm-btn">REMOVE</span>
+        </div>
+      )}
     </div>
   );
+};
+
+ProfileCard.defaultProps = {
+  edit: false,
+  rmbutton: true,
 };
