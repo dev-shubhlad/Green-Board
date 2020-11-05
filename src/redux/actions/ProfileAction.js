@@ -9,6 +9,8 @@ export const getInstituteDetails = (email, password) => async (dispatch) => {
       "/v1/institute/profile?profileType=institute"
     );
 
+    console.log("Institute Data : ", data.data);
+
     dispatch({
       type: ProfileConst.INSTITUTE_PROFILE_SUCCESS,
       payload: data.data,

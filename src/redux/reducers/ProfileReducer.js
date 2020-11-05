@@ -18,7 +18,7 @@ export const InstituteProfileReducer = (state = {}, action) => {
     case ProfileConst.INSTITUTE_PROFILE_REQUEST:
       return { loading: true };
     case ProfileConst.INSTITUTE_PROFILE_SUCCESS:
-      return { loading: false, userInfo: action.payload };
+      return { loading: false, instituteInfo: action.payload };
     case ProfileConst.INSTITUTE_PROFILE_FAIL:
       return { loading: false, error: action.payload };
     default:

@@ -1,5 +1,4 @@
 import React from "react";
-import { InstituteCard } from "../../components/InstituteCards/instituteProfileCard/InstituteCard";
 import { useMediaQuery } from "react-responsive";
 
 import "./institute.css";
@@ -11,11 +10,7 @@ const Institute = () => {
 
   return isMobileOrDesktop ? (
     <div className="mobile-container">
-      <InstituteCard />
-
-      <div className="supervisor-mb-list">
-        <InstituteHorizontalTab />
-      </div>
+      <InstituteHorizontalTab />
     </div>
   ) : (
     <div className="desktop-body container d-flex h-100">

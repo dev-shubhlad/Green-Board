@@ -12,8 +12,6 @@ const Home = () => {
 
   return isMobileOrDesktop ? (
     <div className="mobile-container">
-      <InstituteCard />
-
       <div className="supervisor-mb-list">
         <InstituteHorizontalTab />
       </div>

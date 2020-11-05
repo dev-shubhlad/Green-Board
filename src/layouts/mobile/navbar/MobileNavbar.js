@@ -4,6 +4,7 @@ import classnames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import ScopedCssBaseline from "@material-ui/core/ScopedCssBaseline";
 
 import Institute from "../../../assets/images/icons/Mobile/MyinstituteWhiteicon.svg";
 import Admin from "../../../assets/images/icons/Mobile/AdminiconWhite.svg";
@@ -18,9 +19,10 @@ const useStyles = makeStyles({
     backgroundColor: "#0FBC71",
     color: "white",
     height: "74px",
-    width: "100%",
+    maxWidth: "100%",
     position: "fixed",
     bottom: 0,
+    width: "100%",
     fontSize: ".53rem",
     fontWeight: "500",
     textDecoration: "none",
@@ -35,6 +37,7 @@ const useActionStyle = makeStyles({
     "&:hover": {
       textDecoration: "none",
     },
+    minWidth: 0,
   },
   selected: {
     color: "black",
@@ -50,94 +53,96 @@ export const MobileNavbar = () => {
   const [value, setValue] = React.useState(0);
 
   return (
-    <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
-      showLabels
-      classes={classes}
-    >
-      <BottomNavigationAction
-        component={Link}
-        to="/institute"
-        classes={actionClasses}
-        label="Institute"
-        icon={
-          <img
-            src={Institute}
-            className={classnames({
-              "selected-tab": value === 0,
-              "nonselect-tab": value !== 0,
-            })}
-            style={{ width: "34px" }}
-          />
-        }
-      />
-      <BottomNavigationAction
-        component={Link}
-        to="/"
-        classes={actionClasses}
-        label="Instructor"
-        icon={
-          <img
-            src={Instructor}
-            className={classnames({
-              "selected-tab": value === 1,
-              "nonselect-tab": value !== 1,
-            })}
-            style={{ width: "34px" }}
-          />
-        }
-      />
-      <BottomNavigationAction
-        component={Link}
-        to="/"
-        classes={actionClasses}
-        label="Student"
-        icon={
-          <img
-            src={Student}
-            className={classnames({
-              "selected-tab": value === 2,
-              "nonselect-tab": value !== 2,
-            })}
-            style={{ width: "34px" }}
-          />
-        }
-      />
-      <BottomNavigationAction
-        component={Link}
-        to="/user"
-        classes={actionClasses}
-        label="Admin"
-        icon={
-          <img
-            src={Admin}
-            className={classnames({
-              "selected-tab": value === 3,
-              "nonselect-tab": value !== 3,
-            })}
-            style={{ width: "26.64px" }}
-          />
-        }
-      />
-      <BottomNavigationAction
-        component={Link}
-        to="/"
-        classes={actionClasses}
-        label="More"
-        icon={
-          <img
-            src={More}
-            className={classnames({
-              "selected-tab": value === 4,
-              "nonselect-tab": value !== 4,
-            })}
-            style={{ width: "34px" }}
-          />
-        }
-      />
-    </BottomNavigation>
+    <ScopedCssBaseline>
+      <BottomNavigation
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        showLabels
+        classes={classes}
+      >
+        <BottomNavigationAction
+          component={Link}
+          to="/institute"
+          classes={actionClasses}
+          label="Institute"
+          icon={
+            <img
+              src={Institute}
+              className={classnames({
+                "selected-tab": value === 0,
+                "nonselect-tab": value !== 0,
+              })}
+              style={{ width: "34px" }}
+            />
+          }
+        />
+        <BottomNavigationAction
+          component={Link}
+          to="/"
+          classes={actionClasses}
+          label="Instructor"
+          icon={
+            <img
+              src={Instructor}
+              className={classnames({
+                "selected-tab": value === 1,
+                "nonselect-tab": value !== 1,
+              })}
+              style={{ width: "34px" }}
+            />
+          }
+        />
+        <BottomNavigationAction
+          component={Link}
+          to="/"
+          classes={actionClasses}
+          label="Student"
+          icon={
+            <img
+              src={Student}
+              className={classnames({
+                "selected-tab": value === 2,
+                "nonselect-tab": value !== 2,
+              })}
+              style={{ width: "34px" }}
+            />
+          }
+        />
+        <BottomNavigationAction
+          component={Link}
+          to="/user"
+          classes={actionClasses}
+          label="Admin"
+          icon={
+            <img
+              src={Admin}
+              className={classnames({
+                "selected-tab": value === 3,
+                "nonselect-tab": value !== 3,
+              })}
+              style={{ width: "26.64px" }}
+            />
+          }
+        />
+        <BottomNavigationAction
+          component={Link}
+          to="/"
+          classes={actionClasses}
+          label="More"
+          icon={
+            <img
+              src={More}
+              className={classnames({
+                "selected-tab": value === 4,
+                "nonselect-tab": value !== 4,
+              })}
+              style={{ width: "34px" }}
+            />
+          }
+        />
+      </BottomNavigation>
+    </ScopedCssBaseline>
   );
 };

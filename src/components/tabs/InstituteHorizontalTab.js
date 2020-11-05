@@ -3,6 +3,7 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { Tabs, Tab } from "@material-ui/core";
 import { InstituteProfile } from "../InstituteCards/instituteProfile/InstituteProfile";
 import { CourseStructure } from "../InstituteCards/instituteCourseStructure/CourseStructure";
+import { InstituteCard } from "../InstituteCards/instituteProfileCard/InstituteCard";
 
 const AntTabs = withStyles({
   root: {
@@ -43,18 +44,21 @@ export const InstituteHorizontalTab = () => {
   };
   return (
     <div>
-      <div className={classes.root}>
-        <AntTabs value={value} onChange={handleTabs}>
-          <Tab label="PROFILE" classes={tabClasses} />
-          <Tab label="COURSE STRUCTURE" classes={tabClasses} />
-        </AntTabs>
+      <InstituteCard />
+      <div className="supervisor-mb-list">
+        <div className={classes.root}>
+          <AntTabs value={value} onChange={handleTabs}>
+            <Tab label="PROFILE" classes={tabClasses} />
+            <Tab label="COURSE STRUCTURE" classes={tabClasses} />
+          </AntTabs>
 
-        <TabPanel value={value} index={0}>
-          <InstituteProfile />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <CourseStructure />
-        </TabPanel>
+          <TabPanel value={value} index={0}>
+            <InstituteProfile />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <CourseStructure />
+          </TabPanel>
+        </div>
       </div>
     </div>
   );
