@@ -10,9 +10,9 @@ export const CourseListCard = () => {
         <span className="rating">
           4.8 <span className="total-rating">(87 Ratings)</span>
         </span>
-        <span class="badge badge-secondary course-badge">Class X</span>
+        <span className="badge badge-secondary course-badge">Class X</span>
         <br />
-        <span class="badge badge-secondary category-badge">PRIVATE</span>
+        <span className="badge badge-secondary category-badge">PRIVATE</span>
         <span className="course-type">Active</span>
         <br />
         <span className="instructor-name">Prakash Kumar</span>

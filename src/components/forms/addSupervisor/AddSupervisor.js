@@ -3,20 +3,25 @@ import React from "react";
 export const AddForm = () => {
   return (
     <form>
-      <div class="form-group">
+      <div className="form-group">
         <label for="Name">Name</label>
-        <input type="text" class="form-control" id="Name" placeholder="Name" />
+        <input
+          type="text"
+          className="form-control"
+          id="Name"
+          placeholder="Name"
+        />
       </div>
-      <div class="form-group">
+      <div className="form-group">
         <label for="Email">Email address</label>
         <input
           type="email"
-          class="form-control"
+          className="form-control"
           id="Email"
           placeholder="Enter email"
         />
       </div>
-      <button class="btn btn-primary" style={{ width: "100%" }}>
+      <button className="btn btn-primary" style={{ width: "100%" }}>
         Add
       </button>
     </form>

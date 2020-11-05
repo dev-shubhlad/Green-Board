@@ -15,7 +15,7 @@ export const InstituteCard = (props) => {
           <br />
           <span>Address</span>
           <br />
-          <span class="badge badge-secondary institute-badge">SCHOOL</span>
+          <span className="badge badge-secondary institute-badge">SCHOOL</span>
         </div>
         <img src={Edit} className="editProfile" />
       </div>
