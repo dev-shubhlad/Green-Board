@@ -27,7 +27,7 @@ const DesktopNavbar = () => {
           <ul className="navbar-nav mr-auto nav-justified">
             <li className="nav-item">
               <NavLink
-                to="/"
+                to="/institute"
                 className="nav-link d-flex flex-column"
                 activeClassName="selected"
               >
@@ -60,7 +60,7 @@ const DesktopNavbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/admin"
+                to="/user"
                 className="nav-link d-flex flex-column"
                 activeClassName="selected"
               >
@@ -71,7 +71,7 @@ const DesktopNavbar = () => {
             <li className="nav-item">
               <NavLink to="/" className="nav-link d-flex flex-column">
                 <img src={More} style={{ width: "23px", margin: "auto" }} />
-                <span>Institute</span>
+                <span>More</span>
               </NavLink>
             </li>
           </ul>

@@ -60,7 +60,7 @@ export const MobileNavbar = () => {
     >
       <BottomNavigationAction
         component={Link}
-        to="/"
+        to="/institute"
         classes={actionClasses}
         label="Institute"
         icon={
@@ -108,7 +108,7 @@ export const MobileNavbar = () => {
       />
       <BottomNavigationAction
         component={Link}
-        to="/admin"
+        to="/user"
         classes={actionClasses}
         label="Admin"
         icon={
