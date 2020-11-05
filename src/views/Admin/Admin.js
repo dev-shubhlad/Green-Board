@@ -25,7 +25,15 @@ const Admin = () => {
       {loading && <Loader />}
       {userInfo && <ProfileCard user={userInfo} rmbutton={false} edit={true} />}
       <div className="supervisor-mb-add">
-        <AddSupervisor />
+        {userInfo ? (
+          userInfo.role === "admin" ? (
+            <AddSupervisor />
+          ) : (
+            <ProfileCard user={userInfo} rmbutton={false} edit={true} />
+          )
+        ) : (
+          ""
+        )}
       </div>
       <div className="supervisor-mb-list">
         <SupervisorList />
@@ -40,7 +48,15 @@ const Admin = () => {
         )}
       </div>
       <div className="h-100 flex-fixed-right-width-item">
-        <AddSupervisor />
+        {userInfo ? (
+          userInfo.role === "admin" ? (
+            <AddSupervisor />
+          ) : (
+            <ProfileCard user={userInfo} rmbutton={false} edit={true} />
+          )
+        ) : (
+          ""
+        )}
         <div className="supervisor-list">
           <SupervisorList />
         </div>

@@ -4,7 +4,15 @@ import Edit from "../../assets/images/icons/Editicon.svg";
 import "./ProfileCard.css";
 
 export const ProfileCard = (props) => {
-  const { user, rmbutton, edit } = props;
+  const { user, rmbutton, edit, removeUser } = props;
+
+  const confirmDelete = (user) => {
+    var result = window.confirm(`Want to delete ${user.name}`);
+    if (result) {
+      removeUser(user.id);
+    }
+  };
+
   return (
     <div className="user-card">
       <div className="row">
@@ -27,7 +35,13 @@ export const ProfileCard = (props) => {
       </div>
       {rmbutton && (
         <div className="row">
-          <span className="rm-btn">REMOVE</span>
+          <span
+            className="rm-btn"
+            onClick={() => confirmDelete(user)}
+            style={{ cursor: "pointer" }}
+          >
+            REMOVE
+          </span>
         </div>
       )}
     </div>
