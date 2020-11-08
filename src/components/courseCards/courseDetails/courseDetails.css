@@ -1,0 +1,53 @@
+.offer-price {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.actual-price {
+  font-size: 18px;
+  color: #969696;
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+
+.discount {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0fbc71;
+}
+
+.course-btn {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.course-btn-success {
+  background: #0fbc71;
+}
+
+.course-btn-danger {
+  background: #eb5757;
+}
+
+.week-time {
+  font-size: 16px;
+  color: #6d6d6d;
+}
+
+.course-timing {
+  font-style: italic;
+  color: #6a6a6c;
+}
+
+@media only screen and (max-width: 600px) {
+  .discount {
+    font-size: 18px;
+  }
+}

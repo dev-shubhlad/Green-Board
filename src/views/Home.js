@@ -1,11 +1,9 @@
 import React from "react";
-import { InstituteCard } from "../components/InstituteCards/instituteProfileCard/InstituteCard";
 import { useMediaQuery } from "react-responsive";
 
 import "./Home.css";
-import { InstituteHorizontalTab } from "../components/tabs/institute/InstituteHorizontalTab";
-import { CourseStructure } from "../components/InstituteCards/instituteCourseStructure/CourseStructure";
-import InstituteVerticalTab from "../components/tabs/institute/InstituteVerticalTab";
+import { CourseStructureHorizontalTab } from "../components/tabs/courseStructure/CourseStructureHorizontalTab";
+import CourseStructureVerticalTab from "../components/tabs/courseStructure/CourseStructureVerticalTab";
 
 const Home = () => {
   const isMobileOrDesktop = useMediaQuery({ maxWidth: 600 });
@@ -13,7 +11,7 @@ const Home = () => {
   return isMobileOrDesktop ? (
     <div className="mobile-container">
       <div className="supervisor-mb-list">
-        <InstituteHorizontalTab />
+        <CourseStructureHorizontalTab />
       </div>
     </div>
   ) : (
@@ -27,7 +25,7 @@ const Home = () => {
           <CourseStructure />
         </div>
       </div> */}
-      <InstituteVerticalTab />
+      <CourseStructureVerticalTab />
     </div>
   );
 };

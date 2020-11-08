@@ -31,3 +31,16 @@
 .list-title p {
   margin: 0;
 }
+
+.course-card-title {
+  padding: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  max-width: 315px;
+}
+
+@media only screen and (max-width: 600px) {
+  .course-card-title {
+    max-width: 100%;
+  }
+}

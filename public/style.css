@@ -29,6 +29,10 @@ body {
   margin-bottom: 75px;
 }
 
+.horizontal-tab {
+  margin-top: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     height: 100vh;
