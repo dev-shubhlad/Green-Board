@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 const useTabStyles = makeStyles((theme) => ({
   root: {
     width: "50%",
+    whiteSpace: "nowrap",
     "&.Mui-selected": {
       outline: "none",
     },
