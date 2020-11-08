@@ -2,8 +2,8 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 
 import "./institute.css";
-import { InstituteHorizontalTab } from "../../components/tabs/InstituteHorizontalTab";
-import InstituteVerticalTab from "../../components/tabs/InstituteVerticalTab";
+import { InstituteHorizontalTab } from "../../components/tabs/institute/InstituteHorizontalTab";
+import InstituteVerticalTab from "../../components/tabs/institute/InstituteVerticalTab";
 
 const Institute = () => {
   const isMobileOrDesktop = useMediaQuery({ maxWidth: 600 });

@@ -3,9 +3,9 @@ import { InstituteCard } from "../components/InstituteCards/instituteProfileCard
 import { useMediaQuery } from "react-responsive";
 
 import "./Home.css";
-import { InstituteHorizontalTab } from "../components/tabs/InstituteHorizontalTab";
+import { InstituteHorizontalTab } from "../components/tabs/institute/InstituteHorizontalTab";
 import { CourseStructure } from "../components/InstituteCards/instituteCourseStructure/CourseStructure";
-import InstituteVerticalTab from "../components/tabs/InstituteVerticalTab";
+import InstituteVerticalTab from "../components/tabs/institute/InstituteVerticalTab";
 
 const Home = () => {
   const isMobileOrDesktop = useMediaQuery({ maxWidth: 600 });
