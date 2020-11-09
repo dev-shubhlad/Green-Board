@@ -14,6 +14,7 @@ import PrivateRoute from "./privateRoute/PrivateRoute";
 import Institute from "../views/Institute/Institute";
 import { AddCourse } from "../components/forms/addCourse/AddCourse";
 import CourseStructure from "../views/CourseStructure/CourseStructure";
+import Instructor from "../views/Instructor/InstructorList/Instructor";
 
 const AppRouter = () => {
   return (
@@ -29,7 +30,7 @@ const AppRouter = () => {
         />
         <PrivateRoute path="/course" component={AddCourse} />
         <PrivateRoute path="/course/:courseID" component={AddCourse} />
-        <PrivateRoute path="/instructor" component={Home} />
+        <PrivateRoute path="/instructor" component={Instructor} />
         <PrivateRoute path="/instructor/:intructorID" component={Home} />
         <PrivateRoute path="/user" component={Admin} />
       </Switch>
