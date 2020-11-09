@@ -80,7 +80,7 @@ export const MobileNavbar = () => {
         />
         <BottomNavigationAction
           component={Link}
-          to="/"
+          to="/instructor"
           classes={actionClasses}
           label="Instructor"
           icon={

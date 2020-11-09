@@ -40,7 +40,7 @@ const DesktopNavbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/"
+                to="/instructor"
                 exact
                 className="nav-link d-flex flex-column"
                 activeClassName="selected"

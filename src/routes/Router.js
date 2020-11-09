@@ -29,6 +29,8 @@ const AppRouter = () => {
         />
         <PrivateRoute path="/course" component={AddCourse} />
         <PrivateRoute path="/course/:courseID" component={AddCourse} />
+        <PrivateRoute path="/instructor" component={Home} />
+        <PrivateRoute path="/instructor/:intructorID" component={Home} />
         <PrivateRoute path="/user" component={Admin} />
       </Switch>
     </Router>
