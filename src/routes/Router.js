@@ -21,7 +21,11 @@ const AppRouter = () => {
         <Route path="/login" component={Login} />
         <PrivateRoute exact path="/" component={Home} />
         <PrivateRoute exact path="/institute" component={Institute} />
-        <PrivateRoute exact path="/institute/:courseID" component={Home} />
+        <PrivateRoute
+          exact
+          path="/institute/course/:courseID"
+          component={Home}
+        />
         <PrivateRoute path="/course" component={AddCourse} />
         <PrivateRoute path="/course/:courseID" component={AddCourse} />
         <PrivateRoute path="/user" component={Admin} />

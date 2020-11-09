@@ -9,7 +9,7 @@ export const EnrollNewStudent = () => {
   return (
     <div>
       <div className="row add-supervisor d-flex align-items-center">
-        <p>Create New Course</p>
+        <p>Enroll new Student</p>
         <img
           src={Add}
           className="ml-auto add-button"
@@ -17,7 +17,7 @@ export const EnrollNewStudent = () => {
         />
       </div>
       <Popup
-        title="Create New Course"
+        title="Enroll new Student"
         openPopup={openPopup}
         setPopup={setOpenPopup}
       >
