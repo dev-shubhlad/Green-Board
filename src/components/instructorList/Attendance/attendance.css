@@ -1,0 +1,48 @@
+.attendance {
+  font-size: 18px;
+  line-height: 21px;
+  color: #3d3c3c;
+  padding: 5px;
+}
+
+.report-date {
+  font-size: 20px;
+}
+
+.attendance-title {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 600;
+  padding: 4px 0;
+}
+
+.attendance-heading {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.attendance-row {
+  border-bottom: 1px solid #969696;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.attendance-list {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+  border-top: 1px solid #f1f1f1;
+}
+
+.class-cancel {
+  color: #e2d136;
+  text-align: left;
+}
+
+.absent {
+  color: red;
+}

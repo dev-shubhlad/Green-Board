@@ -12,7 +12,7 @@ import "./desktopNavbar.css";
 
 const DesktopNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-expand-sm">
       <div className="container">
         <a className="navbar-brand nav-justified" href="#">
           <img
