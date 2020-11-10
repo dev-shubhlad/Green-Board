@@ -1,25 +1,27 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import { InstructorHorizontalTab } from "../components/tabs/instructor/InstructorHorizontalTab";
-import InstructorVerticalTab from "../components/tabs/instructor/InstructorVerticalTab";
 
 import "./Home.css";
+import { StudentListHorizontalTab } from "../components/tabs/students/StudentList/StudentListHorizontalTab";
+import StudentListVerticalTab from "../components/tabs/students/StudentList/StudentListVerticalTab";
 
-const Home = () => {
+const Institute = () => {
   const isMobileOrDesktop = useMediaQuery({ maxWidth: 600 });
 
   return isMobileOrDesktop ? (
     <div className="mobile-container">
-      <InstructorHorizontalTab />
+      <StudentListHorizontalTab />
     </div>
   ) : (
     <div className="desktop-body container d-flex h-100">
-      <InstructorVerticalTab />
+      <StudentListVerticalTab />
     </div>
   );
 };
 
-export default Home;
+export default Institute;
+
+
 
 // import { CourseStructureHorizontalTab } from "../components/tabs/courseStructure/CourseStructureHorizontalTab";
 // import CourseStructureVerticalTab from "../components/tabs/courseStructure/CourseStructureVerticalTab";

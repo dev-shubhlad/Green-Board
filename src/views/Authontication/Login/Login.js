@@ -40,7 +40,7 @@ export const Login = ({ location, history }) => {
   };
 
   return (
-    <div className="login-wrapper">
+    <div id="login-form" className="login-wrapper">
       <div className="login-card">
         <div>
           <img className="login-logo" src={Logo} alt="GreenBoard Logo" />

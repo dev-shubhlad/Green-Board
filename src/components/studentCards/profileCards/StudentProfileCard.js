@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DP from "../../../assets/images/shubham_lad.jpg";
 
 export const StudentProfileCard = () => {
@@ -21,9 +22,13 @@ export const StudentProfileCard = () => {
         </div>
       </div>
       <div className="row">
-        <span className="rm-btn course-lst-btn" style={{ cursor: "pointer" }}>
+        <Link
+          to="/student/12345"
+          className="rm-btn course-lst-btn"
+          style={{ cursor: "pointer" }}
+        >
           VIEW DETAILS
-        </span>
+        </Link>
       </div>
     </div>
   );
