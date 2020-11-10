@@ -6,11 +6,11 @@ import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import ScopedCssBaseline from "@material-ui/core/ScopedCssBaseline";
 
-import Institute from "../../../assets/images/icons/Mobile/MyinstituteWhiteicon.svg";
-import Admin from "../../../assets/images/icons/Mobile/AdminiconWhite.svg";
-import Instructor from "../../../assets/images/icons/Mobile/Instructoricon(greenBackground).svg";
-import Student from "../../../assets/images/icons/Mobile/StudentprofileWhiteicon.svg";
-import More from "../../../assets/images/icons/Desktop/Moreblackish.svg";
+import Institute from "../../../assets/images/icons/Mobile/My_Institute.png";
+import Admin from "../../../assets/images/icons/Mobile/Admib_Profile.png";
+import Instructor from "../../../assets/images/icons/Mobile/Instructor_Profile.png";
+import Student from "../../../assets/images/icons/Mobile/Student_Profile.png";
+import More from "../../../assets/images/icons/Mobile/More.png";
 
 import "./mobileNavbar.css";
 
@@ -122,7 +122,7 @@ export const MobileNavbar = () => {
                 "selected-tab": value === 3,
                 "nonselect-tab": value !== 3,
               })}
-              style={{ width: "26.64px" }}
+              style={{ width: "34px" }}
             />
           }
         />

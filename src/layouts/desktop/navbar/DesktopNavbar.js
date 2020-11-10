@@ -2,11 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import Logo from "../../../assets/images/Logo/GreenBordLOGO.svg";
-import Institute from "../../../assets/images/icons/Desktop/MyinstituteBlakish.svg";
-import Admin from "../../../assets/images/icons/Desktop/Adminblackish.svg";
-import Instructor from "../../../assets/images/icons/Desktop/InstructorProfileblakish.svg";
-import Student from "../../../assets/images/icons/Desktop/Studentblackish.svg";
-import More from "../../../assets/images/icons/Desktop/Moreblackish.svg";
+import Admin from "../../../assets/images/icons/Desktop/Admin_Profile.png"
+import Institute from "../../../assets/images/icons/Desktop/My_Institute.png"
+import Instructor from "../../../assets/images/icons/Desktop/Instructor_Profile.png"
+import Student from "../../../assets/images/icons/Desktop/Student_Profile.png"
+import More from "../../../assets/images/icons/Desktop/More.png"
 
 import "./desktopNavbar.css";
 
@@ -53,24 +53,41 @@ const DesktopNavbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/student" className="nav-link d-flex flex-column">
-                <img src={Student} style={{ width: "23px", margin: "auto" }} />
+              <NavLink
+                to="/student"
+                exact
+                className="nav-link d-flex flex-column"
+                activeClassName="selected"
+              >
+                <img
+                  src={Student}
+                  style={{ width: "23px", margin: "auto" }}
+                />
                 <span>Student</span>
               </NavLink>
             </li>
+            
             <li className="nav-item">
               <NavLink
                 to="/user"
                 className="nav-link d-flex flex-column"
                 activeClassName="selected"
               >
-                <img src={Admin} style={{ width: "18px", margin: "auto" }} />
+                <img src={Admin} style={{ width: "22px", margin: "auto" }} />
                 <span>Admin</span>
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/" className="nav-link d-flex flex-column">
-                <img src={More} style={{ width: "23px", margin: "auto" }} />
+              <NavLink
+                to="/"
+                exact
+                className="nav-link d-flex flex-column"
+                activeClassName="selected"
+              >
+                <img
+                  src={More}
+                  style={{ width: "23px", margin: "auto" }}
+                />
                 <span>More</span>
               </NavLink>
             </li>
