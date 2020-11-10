@@ -96,7 +96,7 @@ export const MobileNavbar = () => {
         />
         <BottomNavigationAction
           component={Link}
-          to="/"
+          to="/student"
           classes={actionClasses}
           label="Student"
           icon={

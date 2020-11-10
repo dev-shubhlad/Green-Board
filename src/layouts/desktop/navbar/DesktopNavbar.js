@@ -53,7 +53,7 @@ const DesktopNavbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/" className="nav-link d-flex flex-column">
+              <NavLink to="/student" className="nav-link d-flex flex-column">
                 <img src={Student} style={{ width: "23px", margin: "auto" }} />
                 <span>Student</span>
               </NavLink>

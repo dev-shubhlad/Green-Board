@@ -36,6 +36,11 @@ const AppRouter = () => {
           path="/instructor/:intructorID"
           component={InstructorProfile}
         />
+        <PrivateRoute exact path="/student" component={Home} />
+        <PrivateRoute
+          path="/student/:studentID"
+          component={Home}
+        />
         <PrivateRoute path="/user" component={Admin} />
       </Switch>
     </Router>
