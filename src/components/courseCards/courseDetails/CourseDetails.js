@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./courseDetails.css";
 
 export const CourseDetails = () => {
@@ -56,8 +57,14 @@ export const CourseDetails = () => {
         </div>
       </div>
       <div>
-        <div className="course-btn course-btn-success">EDIT COURSE DETAILS</div>
-        <div className="course-btn course-btn-danger">DELETE COURSE </div>
+        <div className="course-btn course-btn-success">
+          <Link to="/course/1234" className="course-btn-text">
+            EDIT COURSE DETAILS
+          </Link>
+        </div>
+        <div className="course-btn course-btn-danger course-btn-text">
+          DELETE COURSE
+        </div>
       </div>
     </div>
   );

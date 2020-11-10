@@ -15,6 +15,7 @@ import Institute from "../views/Institute/Institute";
 import { AddCourse } from "../components/forms/addCourse/AddCourse";
 import CourseStructure from "../views/CourseStructure/CourseStructure";
 import Instructor from "../views/Instructor/InstructorList/Instructor";
+import InstructorProfile from "../views/Instructor/InstructorProfile/InstructorProfile";
 
 const AppRouter = () => {
   return (
@@ -30,8 +31,11 @@ const AppRouter = () => {
         />
         <PrivateRoute path="/course" component={AddCourse} />
         <PrivateRoute path="/course/:courseID" component={AddCourse} />
-        <PrivateRoute path="/instructor" component={Instructor} />
-        <PrivateRoute path="/instructor/:intructorID" component={Home} />
+        <PrivateRoute exact path="/instructor" component={Instructor} />
+        <PrivateRoute
+          path="/instructor/:intructorID"
+          component={InstructorProfile}
+        />
         <PrivateRoute path="/user" component={Admin} />
       </Switch>
     </Router>

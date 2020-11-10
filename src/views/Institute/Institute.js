@@ -14,15 +14,6 @@ const Institute = () => {
     </div>
   ) : (
     <div className="desktop-body container d-flex h-100">
-      {/* <div className="white h-100 .flex-fixed-left-width-item">
-        <InstituteCard />
-      </div>
-      <div className="h-100 flex-fixed-right-width-item">
-        <InstituteProfile />
-        <div>
-          <CourseStructure />
-        </div>
-      </div> */}
       <InstituteVerticalTab />
     </div>
   );

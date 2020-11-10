@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CourseListCard.css";
 
 export const CourseListCard = () => {
@@ -18,7 +19,9 @@ export const CourseListCard = () => {
         <span className="instructor-name">Prakash Kumar</span>
       </div>
       <div className="row">
-        <span className="rm-btn course-lst-btn">VIEW DETAILS</span>
+        <Link to="/institute/course/12345" className="rm-btn course-lst-btn">
+          VIEW DETAILS
+        </Link>
       </div>
     </div>
   );

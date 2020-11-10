@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const InstrcutorCourseCard = () => {
   return (
@@ -17,7 +18,9 @@ export const InstrcutorCourseCard = () => {
         <span className="instructor-name">Assigned on Aug 24, 2020 </span>
       </div>
       <div className="row">
-        <span className="rm-btn course-lst-btn">VIEW DETAILS</span>
+        <Link to="/institute/course/12345" className="rm-btn course-lst-btn">
+          VIEW DETAILS
+        </Link>
       </div>
     </div>
   );
