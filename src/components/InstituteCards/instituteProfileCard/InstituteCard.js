@@ -12,7 +12,9 @@ export const InstituteCard = (props) => {
   const { loading, instituteInfo, error } = institute;
 
   useEffect(() => {
-    dispatch(getInstituteDetails());
+    if (!instituteInfo) {
+      dispatch(getInstituteDetails());
+    }
   }, []);
 
   return (
