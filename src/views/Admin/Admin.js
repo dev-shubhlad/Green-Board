@@ -17,7 +17,9 @@ const Admin = () => {
   const { loading, userInfo, error } = user;
 
   useEffect(() => {
-    dispatch(getEmployeeDetails());
+    if (!userInfo) {
+      dispatch(getEmployeeDetails());
+    }
   }, [dispatch]);
 
   return isMobileOrDesktop ? (

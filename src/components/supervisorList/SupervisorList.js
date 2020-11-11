@@ -4,14 +4,19 @@ import { Loader } from "../loader/Loader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ProfileCard } from "../userProfileCard/ProfileCard";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchSupervisorList,
+  removeSupervisor,
+} from "../../redux/actions/SupervisorAction";
 
 export const SupervisorList = () => {
-  const [supervisorList, setSupervisorList] = useState([]);
-  const [loadin, setLoadin] = useState(false);
-  const [error, setError] = useState("");
+  const dispatch = useDispatch();
 
   const user = useSelector((state) => state.user);
+  const listOfSupervisor = useSelector((state) => state.listOfSupervisor);
+
+  const { loadin, supervisorList, error } = listOfSupervisor;
   const { userInfo } = user;
 
   const notify = (message) => {
@@ -22,28 +27,31 @@ export const SupervisorList = () => {
     try {
       const { data } = await api.delete(`/v1/institute/supervisor/${id}`);
       let newList = supervisorList.filter((supervisor) => supervisor.id !== id);
-      setSupervisorList(newList);
+      dispatch(removeSupervisor(newList));
+      // setSupervisorList(newList);
     } catch (error) {
       notify(error.message);
     }
   };
 
-  const fetchList = async () => {
-    try {
-      setLoadin(true);
-      const { data } = await api.get("/v1/institute/supervisor");
-      setLoadin(false);
-      console.log(data.data);
-      setSupervisorList(data.data.supervisors);
-    } catch (error) {
-      setLoadin(false);
-      console.log(error.message);
-      notify(error.message);
-    }
-  };
+  // const fetchList = async () => {
+  //   try {
+  //     setLoadin(true);
+  //     const { data } = await api.get("/v1/institute/supervisor");
+  //     setLoadin(false);
+  //     console.log(data.data);
+  //     setSupervisorList(data.data.supervisors);
+  //   } catch (error) {
+  //     setLoadin(false);
+  //     console.log(error.message);
+  //     notify(error.message);
+  //   }
+  // };
 
   useEffect(() => {
-    fetchList();
+    if (!supervisorList) {
+      dispatch(fetchSupervisorList());
+    }
   }, []);
 
   return (
