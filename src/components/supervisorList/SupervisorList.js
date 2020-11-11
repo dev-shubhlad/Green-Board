@@ -34,20 +34,6 @@ export const SupervisorList = () => {
     }
   };
 
-  // const fetchList = async () => {
-  //   try {
-  //     setLoadin(true);
-  //     const { data } = await api.get("/v1/institute/supervisor");
-  //     setLoadin(false);
-  //     console.log(data.data);
-  //     setSupervisorList(data.data.supervisors);
-  //   } catch (error) {
-  //     setLoadin(false);
-  //     console.log(error.message);
-  //     notify(error.message);
-  //   }
-  // };
-
   useEffect(() => {
     if (!supervisorList) {
       dispatch(fetchSupervisorList());
