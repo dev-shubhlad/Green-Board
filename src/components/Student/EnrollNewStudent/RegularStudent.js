@@ -7,7 +7,7 @@ import "./regularStudent.css";
 export const RegularStudent = () => {
   return (
     <div>
-      <div style={{ margin: "5px 0" }}>
+      <div style={{ marginBottom: "5px" }}>
         <AddRegularStudent />
       </div>
       <form class="form-inline my-2 my-lg-0 search-container">

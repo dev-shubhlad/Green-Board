@@ -1,6 +1,7 @@
 #outer {
   width: 100%;
   text-align: left;
+  margin: 10px 0;
 }
 .inner {
   display: inline-block;
@@ -14,9 +15,9 @@
   font-weight: bold;
   font-size: 20px;
   text-align: center;
-  padding: 5px 25px;
+  padding: 5px 10px;
   filter: none !important;
-  border-bottom: none !important;
+  border: none !important;
 }
 
 #outer .inner .selected {

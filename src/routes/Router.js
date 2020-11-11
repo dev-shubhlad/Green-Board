@@ -17,6 +17,7 @@ import CourseStructure from "../views/CourseStructure/CourseStructure";
 import Instructor from "../views/Instructor/InstructorList/Instructor";
 import InstructorProfile from "../views/Instructor/InstructorProfile/InstructorProfile";
 import Student from "../views/Student/StudentList/Student";
+import StudentProfile from "../views/Student/StudentProfile/StudentProfile";
 
 const AppRouter = () => {
   return (
@@ -38,7 +39,7 @@ const AppRouter = () => {
           component={InstructorProfile}
         />
         <PrivateRoute exact path="/student" component={Student} />
-        <PrivateRoute path="/student/:studentID" component={Home} />
+        <PrivateRoute path="/student/:studentID" component={StudentProfile} />
         <PrivateRoute path="/user" component={Admin} />
       </Switch>
     </Router>
