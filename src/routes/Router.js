@@ -18,12 +18,16 @@ import Instructor from "../views/Instructor/InstructorList/Instructor";
 import InstructorProfile from "../views/Instructor/InstructorProfile/InstructorProfile";
 import Student from "../views/Student/StudentList/Student";
 import StudentProfile from "../views/Student/StudentProfile/StudentProfile";
+import { Signup } from "../views/Authontication/SignUp/Signup";
+import { ForgetPassword } from "../views/Authontication/ForgetPassword/ForgetPassword";
 
 const AppRouter = () => {
   return (
     <Router>
       <Switch>
         <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup}/>
+        <Route path="/forget-password" component={ForgetPassword} />
         <PrivateRoute exact path="/" component={Home} />
         <PrivateRoute exact path="/institute" component={Institute} />
         <PrivateRoute

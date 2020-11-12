@@ -74,3 +74,29 @@ export const fetchAccessToken = () => async (dispatch) => {
       });
   });
 };
+
+export const register = (instituteData) => async (dispatch) => {
+  try {
+    dispatch({ type: authConst.LOGIN_REQUEST });
+
+    const { data } = await api.post("/v1/institute/signup", instituteData);
+
+    dispatch({
+      type: authConst.LOGIN_SUCCESS,
+      payload: data.data.tokens.access,
+    });
+
+    setAuthToken(data.data.tokens.access.token);
+
+    localStorage.setItem("AuthToken", JSON.stringify(data.data.tokens.access));
+    localStorage.setItem("RefToken", JSON.stringify(data.data.tokens.refresh));
+  } catch (error) {
+    dispatch({
+      type: authConst.LOGIN_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};

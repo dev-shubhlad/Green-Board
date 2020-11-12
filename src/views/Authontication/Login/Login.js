@@ -7,6 +7,7 @@ import "./Login.css";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../../redux/actions/AuthAction";
 import { Loader } from "../../../components/loader/Loader";
+import { Link } from "react-router-dom";
 
 export const Login = ({ location, history }) => {
   const [instituteID, setInstituteID] = useState("");
@@ -93,13 +94,18 @@ export const Login = ({ location, history }) => {
           </form>
           <div>
             <p>
-              forgot <strong>password</strong> ?
+              <Link to="/forget-password">
+                forgot <strong>password</strong> ?
+              </Link>
             </p>
           </div>
         </div>
         <div className="login-footer">
           <p>
-            <strong>Register Institute!</strong> Get Institute ID
+            <Link to="/signup">
+              <strong>Register Institute! </strong>
+            </Link>
+            Get Institute ID
           </p>
         </div>
       </div>

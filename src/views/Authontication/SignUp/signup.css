@@ -1,0 +1,43 @@
+.signup-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #e5e5e5;
+}
+
+.login-card {
+  padding: 15px 15px;
+  background-color: white;
+  text-align: center;
+  max-width: 415px;
+}
+
+#login-form input::placeholder {
+  text-align: center;
+}
+
+#login-form input:focus {
+  outline: none;
+}
+
+#login-form button {
+  width: 85%;
+  padding: 5px 15px;
+  border-radius: 45px;
+  border: none;
+  background-color: #0fbc71;
+  margin: 15px 0;
+}
+
+.signup-label {
+  float: left;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.names {
+  font-size: 22px;
+  color: #020202;
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+}
