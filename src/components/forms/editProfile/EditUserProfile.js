@@ -26,7 +26,6 @@ export const EditUserProfile = ({ userInfo, setPopup }) => {
     dispatch(
       updateUserProfile(name, email, setPopup, setLoading, notifySuccess)
     );
-    setLoading(false);
   };
 
   return (
