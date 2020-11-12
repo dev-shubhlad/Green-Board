@@ -8,6 +8,7 @@ import {
 } from "../reducers/ProfileReducer";
 import { SupervisorListReducer } from "../reducers/SupervisorListReducer";
 import { InstiCourseListReducer } from "../reducers/CourseListReducer";
+import { InstructorListReducer } from "../reducers/InstructorListReducer";
 
 const reducer = combineReducers({
   auth: authReducer,
@@ -15,6 +16,7 @@ const reducer = combineReducers({
   institute: InstituteProfileReducer,
   listOfSupervisor: SupervisorListReducer,
   instiCourseList: InstiCourseListReducer,
+  listOfInstructor: InstructorListReducer,
 });
 
 const userTokenFromStorage = localStorage.getItem("AuthToken")
