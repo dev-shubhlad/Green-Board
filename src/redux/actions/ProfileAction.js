@@ -56,7 +56,8 @@ export const updateUserProfile = (
   email,
   setPopup,
   setLoading,
-  notifySuccess
+  notifySuccess,
+  notifyError
 ) => async (dispatch) => {
   try {
     setLoading(true);
@@ -76,6 +77,11 @@ export const updateUserProfile = (
       payload: data.data.employee,
     });
   } catch (error) {
+    notifyError(
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message
+    );
     dispatch({
       type: ProfileConst.INSTITUTE_PROFILE_FAIL,
       payload:

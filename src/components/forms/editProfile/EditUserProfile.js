@@ -24,7 +24,14 @@ export const EditUserProfile = ({ userInfo, setPopup }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     dispatch(
-      updateUserProfile(name, email, setPopup, setLoading, notifySuccess)
+      updateUserProfile(
+        name,
+        email,
+        setPopup,
+        setLoading,
+        notifySuccess,
+        notifyError
+      )
     );
   };
 
