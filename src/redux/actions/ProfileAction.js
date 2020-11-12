@@ -50,3 +50,38 @@ export const getEmployeeDetails = (email, password) => async (dispatch) => {
     });
   }
 };
+
+export const updateUserProfile = (
+  name,
+  email,
+  setPopup,
+  setLoading,
+  notifySuccess
+) => async (dispatch) => {
+  try {
+    setLoading(true);
+    const { data } = await api.put(
+      "/v1/institute/profile?profileType=employee",
+      {
+        name,
+        email,
+      }
+    );
+    console.log("updated data: ", data.data.employee);
+    setLoading(false);
+    setPopup(false);
+    notifySuccess(data.message);
+    dispatch({
+      type: ProfileConst.EMPLOYEE_UPDATE_SUCCESS,
+      payload: data.data.employee,
+    });
+  } catch (error) {
+    dispatch({
+      type: ProfileConst.INSTITUTE_PROFILE_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};

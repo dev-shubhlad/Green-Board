@@ -1,8 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./courseDetails.css";
 
 export const CourseDetails = () => {
+  const params = useParams();
+
+  // const removeCourse = async (id) => {
+  //   try {
+  //     const { data } = await api.delete(`/v1/institute/supervisor/${id}`);
+  //     let newList = supervisorList.filter((supervisor) => supervisor.id !== id);
+  //     dispatch(removeSupervisor(newList));
+  //     // setSupervisorList(newList);
+  //   } catch (error) {
+  //     notify(error.message);
+  //   }
+  // };
+
+  // const confirmDelete = (course) => {
+  //   var result = window.confirm(`Want to delete Course`);
+  //   if (result) {
+  //     removeUser(course.id);
+  //   }
+  // };
+
+  // onClick={() => confirmDelete(course)}
+
   return (
     <div className="user-card course-list-card">
       <div className="">

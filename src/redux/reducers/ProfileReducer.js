@@ -6,6 +6,8 @@ export const EmployeeProfileReducer = (state = {}, action) => {
       return { loading: true };
     case ProfileConst.EMPLOYEE_PROFILE_SUCCESS:
       return { loading: false, userInfo: action.payload };
+    case ProfileConst.EMPLOYEE_UPDATE_SUCCESS:
+      return { userInfo: action.payload };
     case ProfileConst.EMPLOYEE_PROFILE_FAIL:
       return { loading: false, error: action.payload };
     default:
@@ -19,6 +21,8 @@ export const InstituteProfileReducer = (state = {}, action) => {
       return { loading: true };
     case ProfileConst.INSTITUTE_PROFILE_SUCCESS:
       return { loading: false, instituteInfo: action.payload };
+    case ProfileConst.INSTITUTE_UPDATE_SUCCESS:
+      return { instituteInfo: action.payload };
     case ProfileConst.INSTITUTE_PROFILE_FAIL:
       return { loading: false, error: action.payload };
     default:

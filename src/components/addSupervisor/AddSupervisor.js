@@ -6,7 +6,6 @@ import { AddForm } from "../forms/addSupervisor/AddSupervisor";
 
 export const AddSupervisor = () => {
   const [openPopup, setOpenPopup] = useState(false);
-  console.log(openPopup);
   return (
     <div>
       <div className="row add-supervisor d-flex align-items-center">

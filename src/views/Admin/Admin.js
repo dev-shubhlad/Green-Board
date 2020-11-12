@@ -31,7 +31,7 @@ const Admin = () => {
           userInfo.role === "admin" ? (
             <AddSupervisor />
           ) : (
-            <ProfileCard user={userInfo} rmbutton={false} edit={true} />
+            <ProfileCard user={userInfo} rmbutton={false} edit={false} />
           )
         ) : (
           ""
@@ -54,7 +54,7 @@ const Admin = () => {
           userInfo.role === "admin" ? (
             <AddSupervisor />
           ) : (
-            <ProfileCard user={userInfo} rmbutton={false} edit={true} />
+            <ProfileCard user={userInfo} rmbutton={false} edit={false} />
           )
         ) : (
           ""

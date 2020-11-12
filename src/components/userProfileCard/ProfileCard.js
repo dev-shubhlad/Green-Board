@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import DP from "../../assets/images/shubham_lad.jpg";
 import Edit from "../../assets/images/icons/Editicon.svg";
 import "./ProfileCard.css";
+import { Popup } from "../popup/Popup";
+import { EditUserProfile } from "../forms/editProfile/EditUserProfile";
 
 export const ProfileCard = (props) => {
   const { user, rmbutton, edit, removeUser } = props;
+
+  const [openPopup, setOpenPopup] = useState(false);
 
   const confirmDelete = (user) => {
     var result = window.confirm(`Want to delete ${user.name}`);
@@ -31,7 +35,14 @@ export const ProfileCard = (props) => {
             {user.role}
           </span>
         </div>
-        {edit && <img src={Edit} className="editProfile" />}
+        {edit && (
+          <img
+            src={Edit}
+            className="editProfile"
+            style={{ cursor: "pointer" }}
+            onClick={() => setOpenPopup(!openPopup)}
+          />
+        )}
       </div>
       {rmbutton && (
         <div className="row">
@@ -44,6 +55,10 @@ export const ProfileCard = (props) => {
           </span>
         </div>
       )}
+
+      <Popup title="Edit Profile" openPopup={openPopup} setPopup={setOpenPopup}>
+        <EditUserProfile userInfo={user} setPopup={setOpenPopup} />
+      </Popup>
     </div>
   );
 };
