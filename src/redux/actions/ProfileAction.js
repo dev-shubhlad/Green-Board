@@ -77,7 +77,45 @@ export const updateUserProfile = (
       payload: data.data.employee,
     });
   } catch (error) {
-    notifyError(
+    // notifyError(
+    //   error.response && error.response.data.message
+    //     ? error.response.data.message
+    //     : error.message
+    // );
+    dispatch({
+      type: ProfileConst.INSTITUTE_PROFILE_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
+export const updateInstituteProfile = (
+  instituteData,
+  setPopup,
+  setLoading,
+  notifySuccess,
+  notifyError
+) => async (dispatch) => {
+  try {
+    setLoading(true);
+    console.log("instituteData", instituteData);
+    const { data } = await api.put(
+      "/v1/institute/profile?profileType=institute",
+      instituteData
+    );
+    console.log("Data institute", data.data);
+    setLoading(false);
+    setPopup(false);
+    notifySuccess(data.message);
+    dispatch({
+      type: ProfileConst.INSTITUTE_UPDATE_SUCCESS,
+      payload: data.data,
+    });
+  } catch (error) {
+    notifySuccess(
       error.response && error.response.data.message
         ? error.response.data.message
         : error.message
