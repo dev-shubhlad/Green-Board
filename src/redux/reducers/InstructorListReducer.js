@@ -6,11 +6,6 @@ export const InstructorListReducer = (state = {}, action) => {
       return { loading: true };
     case InstructorListConst.INSTRUCTOR_LIST_SUCCESS:
       return { loading: false, instructorList: action.payload };
-    case InstructorListConst.ADD_INSTRUCTOR_SUCCESS:
-      return {
-        ...state,
-        instructorList: [...state.instructorList, action.payload],
-      };
     case InstructorListConst.INSTRUCTOR_LIST_FAIL:
       return { loading: false, error: action.payload };
     default:
