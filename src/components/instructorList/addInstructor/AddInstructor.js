@@ -21,7 +21,7 @@ export const AddInstructor = () => {
         openPopup={openPopup}
         setPopup={setOpenPopup}
       >
-        <AddInstructorForm />
+        <AddInstructorForm setPopup={setOpenPopup} />
       </Popup>
     </div>
   );

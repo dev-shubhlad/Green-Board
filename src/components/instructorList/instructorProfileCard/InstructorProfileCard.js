@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import DP from "../../../assets/images/shubham_lad.jpg";
 
-export const InstructorProfileCard = () => {
+export const InstructorProfileCard = (props) => {
+  const { user } = props;
   return (
     <div className="user-card">
       <div className="row">
@@ -10,18 +11,18 @@ export const InstructorProfileCard = () => {
           <img src={DP} className="profile-image" alt={"shubham"} />
         </div>
         <div className="col-9">
-          <span className="title">Shubham Lad</span>
+          <span className="title">{user.name}</span>
           <br />
           <span>Address</span>
           <br />
-          <span>shubham.lad@gmail.com</span>
+          <span>{user.email}</span>
           <br />
           <span>7249148567</span>
         </div>
       </div>
       <div className="row">
         <Link
-          to="/instructor/1234"
+          to={`/instructor/${user.id}`}
           className="rm-btn course-lst-btn"
           style={{ cursor: "pointer" }}
         >
