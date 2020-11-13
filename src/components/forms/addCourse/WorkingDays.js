@@ -43,13 +43,13 @@ export const WorkingDays = (props) => {
             value={daySelect}
             onChange={(e) => setDaySelect(e.target.value)}
           >
-            <option value="MONDAY">MONDAY</option>
-            <option value="TUESDAY">TUESDAY</option>
-            <option value="WEDNESDAY">WEDNESDAY</option>
-            <option value="THURSDAY">THURSDAY</option>
-            <option value="FRIDAY">FRIDAY</option>
-            <option value="SATURDAY">SATURDAY</option>
-            <option value="SUNDAY">SUNDAY</option>
+            <option value="Monday">MONDAY</option>
+            <option value="Tuesday">TUESDAY</option>
+            <option value="Wednesday">WEDNESDAY</option>
+            <option value="Thrusday">THURSDAY</option>
+            <option value="Friday">FRIDAY</option>
+            <option value="Saturday">SATURDAY</option>
+            <option value="Sunday">SUNDAY</option>
           </select>
         </div>
         <div className="col-4">

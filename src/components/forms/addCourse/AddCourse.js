@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Select from "react-select";
 import "./addCourse.css";
 import { WorkingDays } from "./WorkingDays";
+import { api } from "../../../api/Axios";
 
 export class AddCourse extends Component {
   constructor(props) {
@@ -38,8 +39,32 @@ export class AddCourse extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
+    let courseObject;
+    console.log("CourseType: ", this.courseType);
+    if (this.courseType == "PRIVATE") {
+      courseObject = {
+        name: this.name,
+        description: this.description,
+        availability: this.availability,
+        startsAt: this.startsAt,
+        endsAt: this.endsAt,
+        workingDays: this.workingDays,
+        category: this.category,
+        courseType: this.courseType,
+      };
+    } else {
+      courseObject = this.state;
+    }
+    try {
+      console.log("Course Create State: ", courseObject);
+      const { data } = await api.post("/v1/course", courseObject);
+      console.log("Course Create: ", data);
+    } catch (error) {
+      console.log("Course Create State: ", courseObject);
+      console.log("Course Create: ", error);
+    }
   };
 
   handleInputChange = (event) => {
@@ -49,7 +74,7 @@ export class AddCourse extends Component {
   };
 
   handleChange = (e) => {
-    this.setState({ category: e });
+    this.setState({ category: e.value });
   };
 
   handleDays = (e) => {
@@ -110,6 +135,7 @@ export class AddCourse extends Component {
                 placeholder="COURSE END DATE"
                 className="textbox-n"
                 type="text"
+                name="endsAt"
                 value={this.state.endsAt}
                 onChange={this.handleInputChange}
                 onFocus={(e) => (e.target.type = "date")}
@@ -201,7 +227,12 @@ export class AddCourse extends Component {
               </div>
             </fieldset>
             <fieldset>
-              <button name="submit" type="submit" id="course-submit">
+              <button
+                name="submit"
+                type="submit"
+                id="course-submit"
+                onClick={this.handleSubmit}
+              >
                 CREATE COURSE
               </button>
             </fieldset>

@@ -36,7 +36,7 @@ export const InstructorList = () => {
           return (
             <InstructorProfileCard
               user={instructor.instructor}
-              key={instructor.email}
+              key={instructor._id}
             />
           );
         })}
